@@ -1,4 +1,4 @@
-import { parse } from 'twemoji-parser';
+const { parse } = require('twemoji-parser');
 
 /*
  * Split Text
@@ -6,7 +6,7 @@ import { parse } from 'twemoji-parser';
  *  '君👼の味方🤝だよ'
  *  > ['君', TwemojiObj(👼), 'の味方', TwemojiObj(🤝), 'だよ']
  */
-export default function splitEntitiesFromText (text) {
+module.exports = function splitEntitiesFromText (text) {
   const twemojiEntities = parse(text, { assetType: 'svg' });
 
   let unparsedText = text;

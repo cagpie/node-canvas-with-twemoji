@@ -1,5 +1,5 @@
 // Get font size by cssFont and Return size in px.
-export default function getFontSizeByCssFont (cssFont) {
+module.exports = function getFontSizeByCssFont (cssFont) {
   // px 
   const pxMatch = cssFont.match(/([0-9]+)px/);
   if (pxMatch) {

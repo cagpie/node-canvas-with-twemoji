@@ -1,8 +1,8 @@
-import splitEntitiesFromText from './utils/splitEntitiesFromText';
-import loadTwemojiImageByUrl from './utils/loadTwemojiImageByUrl';
-import getFontSizeByCssFont from './utils/getFontSizeByCssFont';
+const splitEntitiesFromText = require('./utils/splitEntitiesFromText');
+const loadTwemojiImageByUrl = require('./utils/loadTwemojiImageByUrl');
+const getFontSizeByCssFont = require('./utils/getFontSizeByCssFont');
 
-export default async function drawTextWithEmoji (
+module.exports = async function drawTextWithEmoji (
   context,
   fillType,
   text,
@@ -11,7 +11,7 @@ export default async function drawTextWithEmoji (
   {
     maxWidth = Infinity, // TODO
     emojiSideMarginPercent = 0.1,
-    emojiTopMarginPercent = 0.2
+    emojiTopMarginPercent = 0
   } = {}
 ) {
   const textEntities = splitEntitiesFromText(text);

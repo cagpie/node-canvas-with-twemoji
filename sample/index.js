@@ -2,7 +2,7 @@ const express = require('express');
 const { createCanvas } = require('canvas');
 const base64 = require('urlsafe-base64');
 
-const { fillTextWithTwemoji } = require('../../src/index');
+const { fillTextWithTwemoji } = require('../src/index');
 
 const app = express();
 

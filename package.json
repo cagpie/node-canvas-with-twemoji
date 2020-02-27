@@ -2,11 +2,12 @@
   "name": "node-canvas-with-twemoji",
   "version": "0.0.1",
   "description": "node-canvas with twemoji",
-  "author": "cagpie",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
+  "author": "cagpie",
+  "license": "MIT",
   "dependencies": {
     "canvas": "^2.6.1",
     "twemoji": "^12.1.5"
