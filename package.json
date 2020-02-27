@@ -1,7 +1,7 @@
 {
   "name": "node-canvas-with-twemoji",
   "version": "0.0.1",
-  "description": "Draw text with twemoji for node-canvas",
+  "description": "Draw text with Twemoji on node-canvas",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
