@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "canvas": "^2.6.1",
-    "twemoji": "^12.1.5",
+    "twemoji": "^12.1.5"
   }
 }
