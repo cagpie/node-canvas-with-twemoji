@@ -1,12 +1,27 @@
 {
   "name": "node-canvas-with-twemoji",
   "version": "0.0.1",
-  "description": "node-canvas with twemoji",
+  "description": "Draw text with twemoji for node-canvas",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
-  "author": "cagpie",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cagpie/node-canvas-with-twemoji.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cagpie/node-canvas-with-twemoji/issues"
+  },
+  "homepage": "https://github.com/cagpie/node-canvas-with-twemoji#readme",
+  "keywords": [
+    "canvas",
+    "node-canvas",
+    "twemoji",
+    "emoji",
+    "node-canvas-with-twemoji"
+  ],
+  "author": "cagpie <cagpie@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.6.1",
