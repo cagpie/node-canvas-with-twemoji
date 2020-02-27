@@ -11,11 +11,12 @@ module.exports = async function drawTextWithEmoji (
   {
     maxWidth = Infinity, // TODO
     emojiSideMarginPercent = 0.1,
-    emojiTopMarginPercent = 0
+    emojiTopMarginPercent = 0.1
   } = {}
 ) {
   const textEntities = splitEntitiesFromText(text);
   const fontSize = getFontSizeByCssFont(context.font);
+  const baseLine = context.measureText('').alphabeticBaseline;
 
   const emojiSideMargin = fontSize * emojiSideMarginPercent;
   const emojiTopMargin = fontSize * emojiTopMarginPercent;
@@ -35,9 +36,14 @@ module.exports = async function drawTextWithEmoji (
       currentWidth += context.measureText(entity).width;
     } else {
       // Emoji case
-      // TODO 考慮する baseline
       const emoji = await loadTwemojiImageByUrl(entity.url);
-      context.drawImage(emoji, x + currentWidth + emojiSideMargin, y + emojiTopMargin, fontSize, fontSize);
+      context.drawImage(
+        emoji,
+        x + currentWidth + emojiSideMargin,
+        y + emojiTopMargin - fontSize - baseLine,
+        fontSize,
+        fontSize
+      );
 
       currentWidth += fontSize + (emojiSideMargin * 2);
     }

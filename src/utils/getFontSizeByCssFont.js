@@ -6,12 +6,6 @@ module.exports = function getFontSizeByCssFont (cssFont) {
     return Number(pxMatch[1]);
   }
 
-  // pt
-
-  // em
-
-  // and others
-
   // default
   return 10;
 }

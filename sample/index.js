@@ -2,7 +2,7 @@ const express = require('express');
 const { createCanvas } = require('canvas');
 const base64 = require('urlsafe-base64');
 
-const { fillTextWithTwemoji } = require('../src/index');
+const wt = require('../src/index');
 
 const app = express();
 
@@ -13,18 +13,16 @@ app.get('/', async (req, res) => {
   context.fillStyle = '#ffffff';
   context.fillRect(0, 0, 200, 200);
 
-  context.textBaseline = 'top';
-
   context.fillStyle = '#000000';
   context.font = '30px Arial';
-  await fillTextWithTwemoji(context, 'test😉', 10, 10);
+  await wt.fillTextWithTwemoji(context, 'test😉', 10, 50);
 
   context.fillStyle = '#888888';
   context.font = '18px Arial';
-  await fillTextWithTwemoji(context, '我々✨は宇宙人👽だ', 10, 50);
+  await wt.fillTextWithTwemoji(context, '我々✨は宇宙人👽だ', 10, 100);
 
   if (req.query.text) {
-    await fillTextWithTwemoji(context, req.query.text, 10, 100);
+    await wt.fillTextWithTwemoji(context, req.query.text, 10, 150);
   }
 
   const b64 = canvas.toDataURL().split(',');
