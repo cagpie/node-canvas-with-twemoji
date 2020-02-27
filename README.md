@@ -1,7 +1,9 @@
 # node-canvas-with-twemoji
 
 ## Installation
-xxx
+```shell
+$ npm install node-canvas-with-twemoji
+```
 
 ## Quick Example
 ```javascript
