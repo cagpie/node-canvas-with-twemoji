@@ -1,7 +1,7 @@
 const splitEntitiesFromText = require('./utils/splitEntitiesFromText');
 const getFontSizeByCssFont = require('./utils/getFontSizeByCssFont');
 
-module.exports = async function measureText (
+module.exports = function measureText (
   context,
   text,
   {
