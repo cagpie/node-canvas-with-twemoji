@@ -16,7 +16,7 @@ async function main () {
 
     context.fillStyle = '#000000';
     context.font = '30px Arial';
-    await fillTextWithTwemoji(context, '😉', 10, 10);
+    await fillTextWithTwemoji(context, '😉', 100, 100);
 }
 
 main();
