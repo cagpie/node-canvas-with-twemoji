@@ -14,8 +14,6 @@ async function main () {
     const canvas = createCanvas(200, 200);
     const context = canvas.getContext('2d');
 
-    context.textBaseline = 'top';
-
     context.fillStyle = '#000000';
     context.font = '30px Arial';
     await fillTextWithTwemoji(context, '😉', 10, 10);
