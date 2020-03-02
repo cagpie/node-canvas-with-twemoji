@@ -4,6 +4,7 @@
 ```shell
 $ npm install node-canvas-with-twemoji
 ```
+[npm](https://www.npmjs.com/package/node-canvas-with-twemoji)
 
 ## Quick Example
 ```javascript
