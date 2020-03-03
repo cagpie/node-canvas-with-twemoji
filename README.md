@@ -4,6 +4,7 @@
 ```shell
 $ npm install node-canvas-with-twemoji
 ```
+[npm](https://www.npmjs.com/package/node-canvas-with-twemoji)
 
 ## Quick Example
 ```javascript
@@ -14,11 +15,9 @@ async function main () {
     const canvas = createCanvas(200, 200);
     const context = canvas.getContext('2d');
 
-    context.textBaseline = 'top';
-
     context.fillStyle = '#000000';
     context.font = '30px Arial';
-    await fillTextWithTwemoji(context, '😉', 10, 10);
+    await fillTextWithTwemoji(context, '😉', 100, 100);
 }
 
 main();
