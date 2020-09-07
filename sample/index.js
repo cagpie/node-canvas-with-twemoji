@@ -17,12 +17,15 @@ app.get('/', async (req, res) => {
   context.font = '30px Arial';
   await wt.fillTextWithTwemoji(context, 'test😉', 10, 50);
 
+  context.textAlign = "center";
   context.fillStyle = '#888888';
   context.font = '18px Arial';
-  await wt.fillTextWithTwemoji(context, '我々✨は宇宙人👽だ', 10, 100);
+  await wt.fillTextWithTwemoji(context, '我々✨は宇宙人👽だ', 100, 100);
+
+
 
   if (req.query.text) {
-    await wt.fillTextWithTwemoji(context, req.query.text, 10, 150);
+    await wt.fillTextWithTwemoji(context, req.query.text, 10, 100);
   }
 
   const b64 = canvas.toDataURL().split(',');
