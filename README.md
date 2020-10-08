@@ -17,7 +17,7 @@ async function main () {
 
     context.fillStyle = '#000000';
     context.font = '30px Arial';
-    await fillTextWithTwemoji(context, '😉', 100, 100);
+    await fillTextWithTwemoji(context, 'emoji 😉', 100, 100);
 }
 
 main();
@@ -32,6 +32,6 @@ main();
 
 ### node-canvas-with-twemoji
 
-Copyright (c) 2020 cagpie <cagpie@gmail.com>
+Copyright (c) 2020 cagpie / Shun Kobayashi <cagpie@gmail.com>
 
 Code licensed under the MIT License: http://opensource.org/licenses/MIT
