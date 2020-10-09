@@ -23,6 +23,9 @@
   ],
   "author": "cagpie <cagpie@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "canvas": "^2.6.1",
     "twemoji": "^13.0.1"
