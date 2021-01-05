@@ -69,6 +69,11 @@ module.exports = async function drawTextWithEmoji (
     } else {
       // Emoji case
       const emoji = await loadTwemojiImageByUrl(entity.url);
+
+      // If you do not resize Image in advance, the image will be rough.
+      emoji.width = fontSize;
+      emoji.height = fontSize;
+
       context.drawImage(
         emoji,
         textLeftMargin + x + currentWidth + emojiSideMargin,
