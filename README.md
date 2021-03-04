@@ -1,5 +1,7 @@
 # node-canvas-with-twemoji
 
+This is a module that is able to draw emoji on node-canvas.
+
 ## Installation
 ```shell
 $ npm install node-canvas-with-twemoji
@@ -32,6 +34,6 @@ main();
 
 ### node-canvas-with-twemoji
 
-Copyright (c) 2020 cagpie / Shun Kobayashi <cagpie@gmail.com>
+Copyright (c) 2020-2021 cagpie / Shun Kobayashi <cagpie@gmail.com>
 
 Code licensed under the MIT License: http://opensource.org/licenses/MIT
