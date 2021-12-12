@@ -24,7 +24,7 @@
   "author": "cagpie <cagpie@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.6.1",
-    "twemoji": "^13.0.1"
+    "canvas": "2.6.1",
+    "twemoji": "^13.1.0"
   }
 }
