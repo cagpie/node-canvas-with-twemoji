@@ -14,16 +14,19 @@ const { createCanvas } = require('canvas');
 const { fillTextWithTwemoji } = require('node-canvas-with-twemoji');
 
 async function main () {
-    const canvas = createCanvas(200, 200);
+    const canvas = createCanvas(230, 200);
     const context = canvas.getContext('2d');
 
     context.fillStyle = '#000000';
     context.font = '30px Arial';
-    await fillTextWithTwemoji(context, 'emoji 😉', 100, 100);
+    await fillTextWithTwemoji(context, 'canvas😉emoji', 10, 100);
 }
 
 main();
 ```
+
+![image](https://user-images.githubusercontent.com/22518033/145718885-919d4d0a-cb80-4e62-bd9d-4205e0d15858.png)
+
 
 ## Dependencies
 
