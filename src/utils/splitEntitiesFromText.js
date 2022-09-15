@@ -14,14 +14,16 @@ module.exports = function splitEntitiesFromText (text) {
   const textEntities = [];
   
   twemojiEntities.forEach((twemoji) => {
-    textEntities.push(
-      unparsedText.slice(0, twemoji.indices[0] - lastTwemojiIndice)
-    );
-
-    textEntities.push(twemoji);
-
-    unparsedText = unparsedText.slice(twemoji.indices[1] - lastTwemojiIndice);
-    lastTwemojiIndice = twemoji.indices[1];
+    if (twemoji.url) {
+      textEntities.push(
+        unparsedText.slice(0, twemoji.indices[0] - lastTwemojiIndice)
+      );
+  
+      textEntities.push(twemoji);
+  
+      unparsedText = unparsedText.slice(twemoji.indices[1] - lastTwemojiIndice);
+      lastTwemojiIndice = twemoji.indices[1];
+    }
   });
 
   textEntities.push(unparsedText);
