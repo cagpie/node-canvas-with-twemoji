@@ -18,7 +18,9 @@ module.exports = function splitEntitiesFromText (text) {
       unparsedText.slice(0, twemoji.indices[0] - lastTwemojiIndice)
     );
 
-    textEntities.push(twemoji);
+    if (twemoji.url) {
+      textEntities.push(twemoji);
+    }
 
     unparsedText = unparsedText.slice(twemoji.indices[1] - lastTwemojiIndice);
     lastTwemojiIndice = twemoji.indices[1];

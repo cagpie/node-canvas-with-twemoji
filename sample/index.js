@@ -15,7 +15,7 @@ app.get('/', async (req, res) => {
 
   context.fillStyle = '#000000';
   context.font = '30px serif';
-  await wt.fillTextWithTwemoji(context, 'test😉', 10, 50);
+  await wt.fillTextWithTwemoji(context, 'test😉test✨️', 10, 50);
 
   context.fillStyle = '#888888';
   context.font = '18px serif';
