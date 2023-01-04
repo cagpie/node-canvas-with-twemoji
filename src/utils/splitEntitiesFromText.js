@@ -7,7 +7,10 @@ const { parse } = require('twemoji-parser');
  *  > ['君', TwemojiObj(👼), 'の味方', TwemojiObj(🤝), 'だよ']
  */
 module.exports = function splitEntitiesFromText (text) {
-  const twemojiEntities = parse(text, { assetType: 'svg' });
+  const twemojiEntities = parse(text, {
+    assetType: 'svg',
+    base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/'
+  });
 
   let unparsedText = text;
   let lastTwemojiIndice = 0;
