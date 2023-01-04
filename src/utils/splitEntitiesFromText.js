@@ -9,7 +9,10 @@ const { parse } = require('twemoji-parser');
 module.exports = function splitEntitiesFromText (text) {
   const twemojiEntities = parse(text, {
     assetType: 'svg',
-    base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/'
+    buildUrl: (codepoints, assetType) =>
+      assetType === 'png'
+        ? `https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/72x72/${ codepoints }.png`
+        : `https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/${ codepoints }.svg`,
   });
 
   let unparsedText = text;
