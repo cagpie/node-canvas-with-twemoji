@@ -38,8 +38,12 @@ app.get('/', async (req, res) => {
   context.textAlign = "right";
   await wt.fillTextWithTwemoji(context, 'right 😳', 190, 350);
 
+  context.textAlign = "center";
+  await wt.fillTextWithTwemoji(context, 'v14 🫶', 100, 400);
+
   if (req.query.text) {
-    await wt.fillTextWithTwemoji(context, req.query.text, 10, 400);
+    context.textAlign = "center";
+    await wt.fillTextWithTwemoji(context, req.query.text, 100, 450);
   }
 
   const b64 = canvas.toDataURL().split(',');
